@@ -1,0 +1,6 @@
+pillow
+numpy
+scipy
+soundfile
+fonttools
+rembg[cpu]
