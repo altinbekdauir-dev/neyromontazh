@@ -299,7 +299,7 @@ footer a{color:var(--muted)}
     <div class="who-grid reveal">
       <div class="who"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg></span><h3 class="heading-5">Блогер, SMM</h3><p class="body-3">Контент жиі әрі сапалы, съемкасыз.</p></div>
       <div class="who"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9l9-5 9 5v10H3z"/><path d="M9 19v-6h6v6"/></svg></span><h3 class="heading-5">Бизнес иесі</h3><p class="body-3">Жарнамалық роликті агенттіксіз жасайсыз.</p></div>
-      <div class="who"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="6" width="14" height="12" rx="2"/><path d="M16.5 10l5-3v10l-5-3"/></svg></span><h3 class="heading-5">Видеограф, монтажшы</h3><p class="body-3">Жаңа қызмет, жұмыс бірнеше есе жылдам.</p></div>
+      <div class="who"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="6" width="14" height="12" rx="2"/><path d="M16.5 10l5-3v10l-5-3"/></svg></span><h3 class="heading-5">Видеограф, монтажер</h3><p class="body-3">Жаңа қызмет, жұмыс бірнеше есе жылдам.</p></div>
     </div>
   </div>
 </section>
@@ -427,7 +427,7 @@ footer a{color:var(--muted)}
   document.getElementById('prev').addEventListener('click', function(){ step(-1); });
   document.getElementById('next').addEventListener('click', function(){ step(1); });
 
-  var words = [['Нейросеть',0],['сенің',0],['камераң,',1],['актерің',1],['және',0],['монтажшың',1],['болады.',0]];
+  var words = [['Нейросеть',0],['сенің',0],['камераң,',1],['актерің',1],['және',0],['монтажерің',1],['болады.',0]];
   var tag = document.getElementById('tagline');
   tag.innerHTML = words.map(function(w){ return '<span class="w' + (w[1] ? ' r' : '') + '">' + esc(w[0]) + '</span>'; }).join(' ');
   var wordEls = tag.querySelectorAll('.w');
