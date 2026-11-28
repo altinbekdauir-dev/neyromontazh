@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Нейромонтаж курсы</title>
-<meta name="description" content="Нейромонтаж курсы: 15 сабақ қазақ тілінде. Nano Banana-мен кадр, Seedance-пен қозғалыс, Claude Code-пен монтаж. Камерасыз кино сапасы.">
+<meta name="description" content="Нейромонтаж курсы: 15 сабақ қазақ тілінде. Промпт, Nano Banana, видеогенерация, Claude-пен монтаж және сайт. 6 500 ₸ материалдар, 25 000 ₸ курс пен кері байланыс.">
 <meta property="og:title" content="Нейромонтаж курсы">
 <meta property="og:description" content="15 сабақ қазақ тілінде: промпттан дайын роликке дейін, камерасыз.">
 <meta property="og:image" content="img/p1.jpg">
@@ -118,6 +118,34 @@ section{padding:80px 0}
 .chip{border-radius:999px;padding:4px 12px;background:var(--paper)}
 .mod:nth-child(2) .chip,.mod:nth-child(4) .chip{background:#FBE3E3;color:var(--red-d)}
 
+.lessons{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:32px}
+.les{background:#fff;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:16px}
+.les .top{display:flex;justify-content:space-between;align-items:flex-start}
+.les .no{font-size:30px;line-height:36px;font-weight:600;letter-spacing:-0.03em}
+.les .ic{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#FBE3E3;color:var(--red)}
+.les.k1 .ic{background:var(--ink);color:#fff}.les.k3 .ic{background:var(--red);color:#fff}
+.les small{color:var(--muted)}
+@media (max-width:899px){.lessons{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:519px){.lessons{grid-template-columns:1fr 1fr}}
+/* plans */
+.plans{display:grid;grid-template-columns:1fr 1.25fr;gap:12px;align-items:stretch}
+.plan{border-radius:32px;padding:32px;display:flex;flex-direction:column;gap:24px}
+.plan.base{background:#1F1A1A}
+.plan.pro{background:#fff;color:var(--ink);position:relative}
+.plan .big{font-size:72px;line-height:72px;font-weight:600;letter-spacing:-0.04em}
+.plan.base .big{font-size:60px;line-height:60px}
+.badge{align-self:flex-start;border-radius:999px;padding:4px 12px;background:var(--red);color:#fff}
+.plan ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
+.plan li{display:flex;gap:8px;align-items:flex-start}
+.plan li svg{flex:none;margin-top:3px}
+.plan li.no{opacity:.45}
+.plan .btn{margin-top:auto;width:100%}
+.plan.base .btn{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4)}.plan.base .btn:hover{background:#fff;color:var(--ink)}
+.tarif{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.apply .tarif label{flex-direction:row;align-items:center;gap:8px;border:1px solid var(--line);border-radius:12px;padding:12px 16px;cursor:pointer;background:var(--paper)}
+.tarif input{accent-color:var(--red)}
+.apply-wrap{margin-top:12px;display:grid;grid-template-columns:1fr;gap:12px}
+@media (max-width:899px){.plans{grid-template-columns:1fr}.plan{padding:24px;border-radius:24px}.plan .big{font-size:60px;line-height:60px}.plan.base .big{font-size:48px;line-height:48px}}
 /* result */
 .result{background:var(--red);color:#fff}
 .res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
@@ -192,7 +220,7 @@ footer a{color:var(--muted)}
   </a>
   <div class="links body-5">
     <a href="#program">Бағдарлама</a>
-    <a href="#offer">Баға</a>
+    <a href="#offer">Тарифтер</a>
     <a href="#faq">Сұрақтар</a>
   </div>
   <a class="btn btn-red button-md" href="#offer">Жазылу</a>
@@ -210,11 +238,11 @@ footer a{color:var(--muted)}
     </div>
     <div class="stats">
       <div class="stat"><b class="mono">15</b><span class="body-5">сабақ қазақ тілінде</span></div>
-      <div class="stat red"><b class="mono">5</b><span class="body-5">модуль: промпттан дайын роликке дейін</span></div>
+      <div class="stat red"><b class="mono">5</b><span class="body-5">бағыт: промпттан сайтқа дейін</span></div>
       <div class="stat ink"><b>0</b><span class="body-5">камера, студия, актер</span></div>
     </div>
     <div class="hero-cta">
-      <p class="title-1">Nano Banana · Seedance · Claude Code</p>
+      <p class="title-1">Nano Banana · видеогенерация · Claude</p>
       <a class="btn btn-red button-md" href="#offer">Курсқа жазылу
         <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 13L13 5M6 5h7v7"/></svg></a>
     </div>
@@ -232,13 +260,14 @@ footer a{color:var(--muted)}
 <section id="program">
   <div class="wrap">
     <div class="sec-head reveal">
-      <h2 class="heading-2">Бес модуль.<br><em>Бір продакшн.</em></h2>
+      <h2 class="heading-2">Бес бағыт.<br><em>15 сабақ.</em></h2>
       <div class="arrows">
         <button class="arrow" type="button" id="prev" aria-label="Алдыңғы модуль"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M11 4L6 9l5 5"/></svg></button>
         <button class="arrow" type="button" id="next" aria-label="Келесі модуль"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 4l5 5-5 5"/></svg></button>
       </div>
     </div>
     <div class="track" id="track"></div>
+    <div class="lessons reveal" id="lessons" aria-label="15 сабақ"></div>
   </div>
 </section>
 
@@ -246,10 +275,10 @@ footer a{color:var(--muted)}
   <div class="wrap">
     <div class="sec-head reveal"><h2 class="heading-2" id="resH">Курс соңында</h2></div>
     <div class="res-grid reveal">
-      <div class="res light"><b>01</b><span class="title-1">Сценарий мен хук дайын</span></div>
-      <div class="res"><b>02</b><span class="title-1">Толық раскадровка</span></div>
+      <div class="res light"><b>01</b><span class="title-1">Сценарий мен промпт дайын</span></div>
+      <div class="res"><b>02</b><span class="title-1">Nano Banana кадрлары</span></div>
       <div class="res"><b>30</b><span class="title-1">минутта монтаж</span></div>
-      <div class="res light"><b>1</b><span class="title-1">портфолиодағы алғашқы жұмыс</span></div>
+      <div class="res light"><b>1</b><span class="title-1">Claude-пен жасалған өз сайтың</span></div>
     </div>
   </div>
 </section>
@@ -267,22 +296,36 @@ footer a{color:var(--muted)}
 
 <section class="offer" id="offer" aria-labelledby="offH">
   <div class="wrap">
-    <div class="sec-head reveal"><h2 class="heading-2" id="offH">Курсқа <em>жазылу</em></h2></div>
-    <div class="offer-grid reveal">
-      <div class="price">
-        <p class="caption-3" style="opacity:.6">Толық курс</p>
-        <p class="big mono">[БАҒА] ₸</p>
-        <ul class="incl body-3" id="included"></ul>
-        <p class="note body-5">Старт: [КҮНІ]. Орын саны шектеулі.</p>
+    <div class="sec-head reveal"><h2 class="heading-2" id="offH">Екі <em>тариф</em></h2></div>
+    <div class="plans reveal">
+      <div class="plan base">
+        <p class="caption-3" style="opacity:.6">Базалық</p>
+        <h3 class="heading-4">Монтаж материалдары</h3>
+        <p class="big mono">6 500 ₸</p>
+        <ul class="body-3" id="baseList"></ul>
+        <button class="btn button-md" type="button" data-plan="base">Материалдарды алу</button>
       </div>
-      <form class="apply" id="leadForm" novalidate>
+      <div class="plan pro">
+        <span class="badge caption-3">Ең тиімді</span>
+        <h3 class="heading-4">Курс және кері байланыс</h3>
+        <p class="big mono">25 000 ₸</p>
+        <ul class="body-3" id="proList"></ul>
+        <button class="btn btn-red button-md" type="button" data-plan="pro">Курсқа жазылу</button>
+      </div>
+    </div>
+    <div class="apply-wrap">
+      <form class="apply reveal" id="leadForm" novalidate>
         <h3 class="heading-4">WhatsApp арқылы жазылу</h3>
-        <p class="body-3" style="color:#6B5557">Атыңызды жазыңыз, WhatsApp ашылады. Хабарламаны жіберсеңіз болды.</p>
+        <p class="body-3" style="color:#6B5557">Тарифті таңдап, атыңызды жазыңыз. WhatsApp ашылады, хабарламаны жіберсеңіз болды. Старт: [КҮНІ].</p>
+        <div class="tarif body-5" role="radiogroup" aria-label="Тариф">
+          <label><input type="radio" name="plan" value="base"> 6 500 ₸ · материалдар</label>
+          <label><input type="radio" name="plan" value="pro" checked> 25 000 ₸ · курс</label>
+        </div>
         <label class="title-3">Атыңыз
           <input class="field" id="name" type="text" name="name" autocomplete="name" placeholder="Мысалы, Айгерім"></label>
         <p class="err body-5 hidden" id="err" role="alert"></p>
         <button class="btn btn-red button-md" type="submit">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.6.6-.9 1.4-.9 2.2 0 .9.4 1.8.9 2.5 1 1.5 2.3 2.7 3.9 3.5.5.2 1 .4 1.5.5.6.2 1.1.2 1.7.1.6-.1 1.5-.6 1.7-1.2.2-.5.2-1 .1-1.1l-.4-.3z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
           WhatsApp-қа жазу</button>
         <small class="body-5">Немесе тікелей: <a href="https://wa.me/77074819113" target="_blank" rel="noopener">+7 707 481 91 13</a></small>
       </form>
@@ -326,16 +369,32 @@ footer a{color:var(--muted)}
   var modules = [
     { n:'01', title:'Промпт пен сценарий', img:'m1', alt:'Мұз басқан көлде машинкада жазып отырған жігіт', chips:['Хук','Сценарий','Промпт формуласы'] },
     { n:'02', title:'Кадр: Nano Banana', img:'m2', alt:'Бархандағы алып полароид фотосына сүйенген қыз', chips:['Кейіпкер','Стиль','Жарық'] },
-    { n:'03', title:'Қозғалыс: Seedance', img:'m3', alt:'Тау көлінде ақ атпен шауып келе жатқан жігіт', chips:['Камера','Диалог','Ретейк'] },
-    { n:'04', title:'Монтаж: Claude Code', img:'m4', alt:'Бидай даласында креслода ноутбукпен монтаж жасап отырған адам', chips:['Субтитр','Шрифт','Саунд дизайн'] },
-    { n:'05', title:'Нәтиже және табыс', img:'m5', alt:'Тұзды далада қызыл көліктің капотында отырған қыз', chips:['Портфолио','Клиент','Баға'] }
+    { n:'03', title:'Видеогенерация', img:'m3', alt:'Тау көлінде ақ атпен шауып келе жатқан жігіт', chips:['Seedance','Камера','Диалог'] },
+    { n:'04', title:'Монтаж: Claude', img:'m4', alt:'Бидай даласында креслода ноутбукпен монтаж жасап отырған адам', chips:['Субтитр','Саунд дизайн','30 минут'] },
+    { n:'05', title:'Сайт: Claude', img:'m5', alt:'Тұзды далада қызыл көліктің капотында отырған қыз', chips:['Портфолио','Өтінім','Клиент'] }
   ];
   var track = document.getElementById('track');
   track.innerHTML = modules.map(function(m){
-    return '<article class="mod"><div class="pic"><img src="img/' + m.img + '.jpg" alt="' + esc(m.alt) + '" loading="lazy"><span class="num caption-3 mono">' + m.n + ' модуль</span></div>' +
+    return '<article class="mod"><div class="pic"><img src="img/' + m.img + '.jpg" alt="' + esc(m.alt) + '" loading="lazy"><span class="num caption-3 mono">' + m.n + ' бағыт</span></div>' +
       '<div class="body"><h3 class="heading-5">' + esc(m.title) + '</h3><div class="chips">' +
       m.chips.map(function(c){ return '<span class="chip body-5">' + esc(c) + '</span>'; }).join('') + '</div></div></article>';
   }).join('');
+  var ICON = {
+    pen:'<path d="M4 20h4L19 9l-4-4L4 16z"/><path d="M13.5 6.5l4 4"/>',
+    img:'<rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/>',
+    play:'<rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/>',
+    cut:'<circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M8 15L19 4M16 15L5 4"/>',
+    web:'<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/>'
+  };
+  var dirs = [['pen','Промпт'],['img','Nano Banana'],['play','Видео'],['cut','Монтаж'],['web','Сайт']];
+  var lesHtml = '';
+  for (var i = 0; i < 15; i++) {
+    var d = dirs[Math.floor(i / 3)];
+    lesHtml += '<div class="les k' + (i % 3 + 1) + '"><div class="top"><span class="no mono">' + String(i + 1).padStart(2, '0') + '</span>' +
+      '<span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + ICON[d[0]] + '</svg></span></div>' +
+      '<small class="body-5">' + d[1] + '</small></div>';
+  }
+  document.getElementById('lessons').innerHTML = lesHtml;
   function step(d){ var c = track.querySelector('.mod'); track.scrollBy({ left: d * (c.offsetWidth + 16), behavior: reduced ? 'auto' : 'smooth' }); }
   document.getElementById('prev').addEventListener('click', function(){ step(-1); });
   document.getElementById('next').addEventListener('click', function(){ step(1); });
@@ -369,16 +428,19 @@ footer a{color:var(--muted)}
     rev.forEach(function(el){ io.observe(el); });
   } else { rev.forEach(function(el){ el.classList.add('in'); }); }
 
-  var included = ['15 видеосабақ қазақ тілінде','Исходник материалдар','Промпт шаблондары','Claude скиллдері','Үй тапсырмалары','Алғашқы роликті бірге жасау'];
-  var tick = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>';
-  document.getElementById('included').innerHTML = included.map(function(t){ return '<li>' + tick + '<span>' + esc(t) + '</span></li>'; }).join('');
+  var tick = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#E3262B" stroke-width="2" aria-hidden="true"><path d="M3.5 9.5l3.5 3.5 7.5-8"/></svg>';
+  var cross = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4.5 4.5l9 9M13.5 4.5l-9 9"/></svg>';
+  function list(id, items){ document.getElementById(id).innerHTML = items.map(function(r){ return '<li' + (r[1] ? '' : ' class="no"') + '>' + (r[1] ? tick : cross) + '<span>' + esc(r[0]) + '</span></li>'; }).join(''); }
+  list('baseList', [['Монтажға арналған футаждар',1],['Саунд-дизайн және дыбыстар',1],['Шрифттар мен шаблондар',1],['Промпт шаблондары',1],['15 сабақ',0],['Кері байланыс',0]]);
+  list('proList', [['15 сабақ қазақ тілінде',1],['Барлық монтаж материалдары',1],['Кері байланыс: сұрақтарға жауап',1],['Роликті бірге талдап, бірге жасаймыз',1],['Claude-пен монтаж және сайт',1],['Nano Banana, видеогенерация, промпттар',1]]);
 
   var faqs = [
     ['Код білу керек пе?','Жоқ. Claude Code-қа қарапайым тілмен жазасыз, кодты ол өзі жазады.'],
     ['Қандай компьютер керек?','Mac немесе Windows ноутбук жеткілікті. Генерация нейросеть серверлерінде жүреді.'],
     ['Нейросетьтер ақылы ма?','Кейбірі ақылы. Қай құрал не үшін керек және қайда үнемдеуге болатынын көрсетеміз.'],
     ['Мүлде нөлден бастасам бола ма?','Иә. Алғашқы сабақта құралдарды орнатып, бірінші кадрды бірге жасаймыз.'],
-    ['Сабақтар қай тілде?','Қазақ тілінде. Құралдардың атаулары түпнұсқа күйінде қалады.']
+    ['Сабақтар қай тілде?','Қазақ тілінде. Құралдардың атаулары түпнұсқа күйінде қалады.'],
+    ['Екі тарифтің айырмасы неде?','6 500 ₸: монтажға арналған материалдар, кері байланыссыз. 25 000 ₸: 15 сабақ, барлық материал, сұрақтарға жауап және роликті бірге жасаймыз.']
   ];
   var plus = '<svg class="plus" width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M11 3v16M3 11h16"/></svg>';
   var faqList = document.getElementById('faqList');
@@ -394,12 +456,17 @@ footer a{color:var(--muted)}
   });
 
   var form = document.getElementById('leadForm'), err = document.getElementById('err'), nameEl = document.getElementById('name');
+  document.querySelectorAll('[data-plan]').forEach(function(b){ b.addEventListener('click', function(){
+    var r = form.querySelector('input[value=' + b.dataset.plan + ']'); if (r) r.checked = true;
+    form.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' }); setTimeout(function(){ nameEl.focus({ preventScroll:true }); }, reduced ? 0 : 500);
+  }); });
   nameEl.addEventListener('input', function(){ err.classList.add('hidden'); });
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var name = nameEl.value.trim();
     if (!name) { err.textContent = 'Атыңызды жазыңыз, сонда WhatsApp ашылады.'; err.classList.remove('hidden'); nameEl.focus(); return; }
-    var text = 'Сәлеметсіз бе! Менің атым ' + name + '. Нейромонтаж курсына жазылғым келеді.';
+    var pl = (form.querySelector('input[name=plan]:checked') || {}).value;
+    var text = 'Сәлеметсіз бе! Менің атым ' + name + '. ' + (pl === 'base' ? 'Монтаж материалдарын (6 500 ₸) алғым келеді.' : 'Нейромонтаж курсына (25 000 ₸) жазылғым келеді.');
     window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(text), '_blank', 'noopener');
   });
 })();
