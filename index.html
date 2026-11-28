@@ -146,6 +146,16 @@ section{padding:80px 0}
 .tarif input{accent-color:var(--red)}
 .apply-wrap{margin-top:12px;display:grid;grid-template-columns:1fr;gap:12px}
 @media (max-width:899px){.plans{grid-template-columns:1fr}.plan{padding:24px;border-radius:24px}.plan .big{font-size:60px;line-height:60px}.plan.base .big{font-size:48px;line-height:48px}}
+/* case */
+.case{background:var(--paper)}
+.case-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:24px;align-items:center}
+.case .money{font-size:96px;line-height:96px;font-weight:600;letter-spacing:-0.05em;color:var(--red)}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.shot{aspect-ratio:9/16;border-radius:24px;background:#fff;border:1px dashed #D4C6C3;display:grid;place-items:center;color:var(--muted);text-align:center;padding:16px;overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover}
+.shot:nth-child(2){transform:translateY(-24px)}
+.quote{border-radius:24px;background:#fff;padding:24px;display:flex;flex-direction:column;gap:12px}
+@media (max-width:899px){.case-grid{grid-template-columns:1fr}.case .money{font-size:72px;line-height:72px}.shot:nth-child(2){transform:none}}
 /* result */
 .result{background:var(--red);color:#fff}
 .res-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
@@ -290,6 +300,24 @@ footer a{color:var(--muted)}
       <div class="who"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18h2"/></svg></span><h3 class="heading-5">Блогер, SMM</h3><p class="body-3">Контент жиі әрі сапалы, съемкасыз.</p></div>
       <div class="who"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 9l9-5 9 5v10H3z"/><path d="M9 19v-6h6v6"/></svg></span><h3 class="heading-5">Бизнес иесі</h3><p class="body-3">Жарнамалық роликті агенттіксіз жасайсыз.</p></div>
       <div class="who"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="6" width="14" height="12" rx="2"/><path d="M16.5 10l5-3v10l-5-3"/></svg></span><h3 class="heading-5">Видеограф, монтажшы</h3><p class="body-3">Жаңа қызмет, жұмыс бірнеше есе жылдам.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="case" id="case" aria-labelledby="caseH">
+  <div class="wrap case-grid">
+    <div style="display:flex;flex-direction:column;gap:24px" class="reveal">
+      <p class="caption-3" style="color:var(--red)">Оқушы кейсі</p>
+      <h2 class="heading-2" id="caseH">Бір платформадан</h2>
+      <p class="money mono">$1 000</p>
+      <p class="title-1">[Аты] курстан кейін [платформа] арқылы [мерзім] $1 000 табады.</p>
+      <div class="quote"><p class="body-3">«[Оқушының өз сөзі: курсқа дейін не болды, қазір не өзгерді]»</p><p class="body-5" style="color:var(--muted)">[Аты], [қала]</p></div>
+      <p class="body-5" style="color:var(--muted)">Скриншоттар оқушының рұқсатымен. Нәтиже әр адамның еңбегіне байланысты.</p>
+    </div>
+    <div class="shots reveal" aria-label="Табыс скриншоттары">
+      <div class="shot body-5">Скриншот 1</div>
+      <div class="shot body-5">Скриншот 2</div>
+      <div class="shot body-5">Скриншот 3</div>
     </div>
   </div>
 </section>
